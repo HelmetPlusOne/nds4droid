@@ -51,7 +51,7 @@
 //#define _SHOW_VTX_COUNTERS	// show polygon/vertex counters on screen
 #ifdef _SHOW_VTX_COUNTERS
 u32 max_polys, max_verts;
-#include "GPU_OSD.h"
+#include "GPU_osd.h"
 #endif
 
 

@@ -39,3 +39,6 @@ local.properties
 ehthumbs.db
 Thumbs.db
 *.bak
+
+/.idea
+/app/src/main/obj

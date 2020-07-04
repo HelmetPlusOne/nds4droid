@@ -57,6 +57,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnSharedPreferenceChangeListener {
 
@@ -701,8 +702,13 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
 								destTouch = screenOption == 1 ? emptyRect : full;
 							}
 							else {
-								destMain = new Rect(0,black,newWidth / 2,newHeight - black);
-								destTouch = new Rect(newWidth / 2,black,newWidth,newHeight-black);
+								//Toast.makeText(MainActivity.this, Float.toString(dsAspect), Toast.LENGTH_SHORT).show();
+								int hightMain = newHeight * 9 / 10;
+								int widthMain = hightMain * 256 / 192;
+								int widthTouch = newWidth - widthMain;
+								int heightTouch = widthTouch * 192 / 256;
+								destMain = new Rect(0,0, widthMain, hightMain);
+								destTouch = new Rect(widthMain, 0, newWidth, heightTouch);
 							}
 						}
 						else {

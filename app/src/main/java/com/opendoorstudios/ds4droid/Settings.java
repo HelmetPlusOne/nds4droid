@@ -228,19 +228,19 @@ public class Settings extends PreferenceActivity {
 		}
 		
 		if(!prefs.contains(SHOW_TOUCH_MESSAGE))
-			editor.putBoolean(SHOW_TOUCH_MESSAGE, true);
+			editor.putBoolean(SHOW_TOUCH_MESSAGE, false);
 		if(!prefs.contains(SHOW_FPS))
 			editor.putBoolean(SHOW_FPS, false);
 		if(!prefs.contains(FRAME_SKIP))
-			editor.putString(FRAME_SKIP, "3");
+			editor.putString(FRAME_SKIP, "2");
 		if(!prefs.contains(SCREEN_FILTER))
 			editor.putString(SCREEN_FILTER, "0");
 		if(!prefs.contains(RENDERER))
 			editor.putString(RENDERER, "2");
 		if(!prefs.contains(ENABLE_SOUND))
-			editor.putBoolean(ENABLE_SOUND, false);
+			editor.putBoolean(ENABLE_SOUND, true);
 		if(!prefs.contains(SHOW_SOUND_MESSAGE))
-			editor.putBoolean(SHOW_SOUND_MESSAGE, true);
+			editor.putBoolean(SHOW_SOUND_MESSAGE, false);
 		if(!prefs.contains(LCD_SWAP))
 			editor.putBoolean(LCD_SWAP, false);
 		if(!prefs.contains(DONT_ROTATE_LCDS))
@@ -256,7 +256,7 @@ public class Settings extends PreferenceActivity {
 		if(!prefs.contains(LAST_ROM_DIR))
 			editor.putString(LAST_ROM_DIR, Environment.getExternalStorageDirectory().getPath() );
 		if(!prefs.contains(CPU_MODE))
-			editor.putString(CPU_MODE, "2");
+			editor.putString(CPU_MODE, "1");
 		if(!prefs.contains(SOUND_SYNC_MODE))
 			editor.putString(SOUND_SYNC_MODE, "0");
 		if(!prefs.contains(ENABLE_FOG))
@@ -264,11 +264,11 @@ public class Settings extends PreferenceActivity {
 		if(!prefs.contains(JIT_SIZE))
 			editor.putInt(JIT_SIZE,10);
 		if(!prefs.contains(ENABLE_AUTOSAVE))
-			editor.putBoolean(ENABLE_AUTOSAVE, true);
+			editor.putBoolean(ENABLE_AUTOSAVE, false);
 		if(!prefs.contains(AUTOSVAE_FREQUENCY))
 			editor.putString(AUTOSVAE_FREQUENCY, "1");
 		if(!prefs.contains(DISABLE_ROM_BROWSER))
-			editor.putBoolean(DISABLE_ROM_BROWSER, false);
+			editor.putBoolean(DISABLE_ROM_BROWSER, true);
 		if(!prefs.contains(LANGUAGE)) {
 			final String userLanguage = Locale.getDefault().getISO3Language();
 			int lang = 1; //english

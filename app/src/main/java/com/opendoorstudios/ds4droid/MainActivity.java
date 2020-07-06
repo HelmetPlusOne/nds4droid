@@ -528,11 +528,13 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
 			setWillNotDraw(false);
 			setFocusable(true);
 			setFocusableInTouchMode(true);
-			
+
+			emuPaint.setFilterBitmap(false);
 			hudPaint.setColor(Color.WHITE);
 			hudPaint.setShadowLayer(1, 0, 0, Color.BLACK);
 			hudPaint.setTextSize(defhudsize);
 			hudPaint.setAntiAlias(false);
+			hudPaint.setFilterBitmap(false);
 		}
 		
 		boolean doForceResize = false;
@@ -702,7 +704,7 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
 								destTouch = screenOption == 1 ? emptyRect : full;
 							}
 							else {
-								//Toast.makeText(MainActivity.this, Float.toString(dsAspect), Toast.LENGTH_SHORT).show();
+								//Toast.makeText(MainActivity.this, Float.toString(4242), Toast.LENGTH_SHORT).show();
 								int hightMain = newHeight * 9 / 10;
 								int widthMain = hightMain * 256 / 192;
 								int widthTouch = newWidth - widthMain;
